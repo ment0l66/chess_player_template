@@ -10,7 +10,7 @@ from chess_tournament.players import Player
 
 class TransformerPlayer(Player):
     """
-    Tiny LM baseline chess player.
+    T5-small based transformer chess bot
 
     REQUIRED:
         Subclasses chess_tournament.players.Player
