@@ -10,10 +10,12 @@ from chess_tournament.players import Player
 
 class TransformerPlayer(Player):
     """
-    Tiny LM baseline chess player.
+    Functional transformer-based chess player using fine-tuned T5-small.
 
     REQUIRED:
         Subclasses chess_tournament.players.Player
+        Contains get_move(fen)
+        Initializable with only name
     """
 
     UCI_REGEX = re.compile(r"\b([a-h][1-8][a-h][1-8][qrbn]?)\b", re.IGNORECASE)
