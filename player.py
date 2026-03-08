@@ -9,7 +9,12 @@ from chess_tournament.players import Player
 
 
 class TransformerPlayer(Player):
+    """
+    Tiny LM baseline chess player.
 
+    REQUIRED:
+        Subclasses chess_tournament.players.Player
+    """
     UCI_REGEX = re.compile(r"\b([a-h][1-8][a-h][1-8][qrbn]?)\b", re.IGNORECASE)
 
     def __init__(
