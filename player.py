@@ -20,8 +20,8 @@ class TransformerPlayer(Player):
 
     def __init__(
         self,
-        name: str = "TinyLMPlayer",
-        model_id: str = "HuggingFaceTB/SmolLM2-135M-Instruct",
+        name: str = "Michael",
+        model_id: str = "ment0l66/t5_chess",
         temperature: float = 0.7,
         max_new_tokens: int = 8,
     ):
@@ -98,7 +98,8 @@ class TransformerPlayer(Player):
 
             move = self._extract_move(decoded)
 
-            if move:
+            board = chess.Board(fen)
+            if move in [m.uci() for m in board.legal_moves]:
                 return move
 
         except Exception:
