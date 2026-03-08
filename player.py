@@ -9,21 +9,13 @@ from chess_tournament.players import Player
 
 
 class TransformerPlayer(Player):
-    """
-    Functional transformer-based chess player using fine-tuned T5-small.
-
-    REQUIRED:
-        Subclasses chess_tournament.players.Player
-        Contains get_move(fen)
-        Initializable with only name
-    """
 
     UCI_REGEX = re.compile(r"\b([a-h][1-8][a-h][1-8][qrbn]?)\b", re.IGNORECASE)
 
     def __init__(
         self,
         name: str,
-        model_id: str = "ment0l66/t5_chess",
+        model_id: str = "ment0l66/t5_chess_version2",
         temperature: float = 0.7,
         max_new_tokens: int = 8,
     ):
