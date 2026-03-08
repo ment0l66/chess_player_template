@@ -23,7 +23,7 @@ class TransformerPlayer(Player):
     def __init__(
         self,
         name: str,
-        model_id: str = "ment0l66/t5_chess_version2",
+        model_id: str = "ment0l66/t5_chess",
         temperature: float = 0.7,
         max_new_tokens: int = 8,
     ):
