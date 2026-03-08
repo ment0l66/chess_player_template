@@ -92,8 +92,7 @@ class TransformerPlayer(Player):
 
             move = self._extract_move(decoded)
 
-            board = chess.Board(fen)
-            if move in [m.uci() for m in board.legal_moves]:
+            if move:
                 return move
 
         except Exception:
