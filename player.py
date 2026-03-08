@@ -15,6 +15,7 @@ class TransformerPlayer(Player):
     REQUIRED:
         Subclasses chess_tournament.players.Player
     """
+    
     UCI_REGEX = re.compile(r"\b([a-h][1-8][a-h][1-8][qrbn]?)\b", re.IGNORECASE)
 
     def __init__(
